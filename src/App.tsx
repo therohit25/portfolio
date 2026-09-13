@@ -12,6 +12,11 @@ import {
   FolderGit2,
   Moon,
   Sun,
+  Server,
+  Database,
+  Palette,
+  Cloud,
+  Gauge,
 } from "lucide-react";
 
 function App() {
@@ -58,7 +63,7 @@ function App() {
                     : "bg-blue-500/20 text-blue-200"
                 } backdrop-blur-sm`}
               >
-                Full Stack Developer
+                Full Stack Engineer
               </span>
             </div>
 
@@ -67,9 +72,10 @@ function App() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed animate-fade-in">
-              I am Rohit Ghadage, a Website Developer with around 2 years of
-              experience building modern, intuitive, and progressive web
-              applications using technologies like Next.js, React, and Node.js.
+              I am Rohit Ghadage, a Full Stack Engineer with around 3 years of
+              experience specializing in Next.js and frontend architecture, with
+              solid full-stack depth across Node.js, NestJS, and
+              performance-focused production systems.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -82,7 +88,7 @@ function App() {
               </a>
 
               <a
-                href="https://drive.google.com/uc?export=download&id=1-H2ishLs81zGmcJ1OwX06Lx2RMAZ-mxo"
+                href="https://drive.google.com/file/d/1cS3vCS2h_cB6hYKFz_sftWxJYY_MMbJI/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105 ${
@@ -125,6 +131,81 @@ function App() {
         </div>
       </section>
 
+      {/* Summary Section */}
+      <section
+        id="summary"
+        className={`${darkMode ? "bg-gray-800/50" : "bg-white"} py-20`}
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-8">
+            <Code2 className="text-blue-600" size={32} />
+            <h2 className="text-4xl font-bold">Summary</h2>
+          </div>
+
+          <div
+            className={`space-y-4 text-lg leading-relaxed max-w-4xl ${
+              darkMode ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
+            <p>
+              Full Stack Engineer with ~3 years of experience specializing in
+              Next.js and frontend architecture, with solid full-stack depth
+              across product and client-facing platforms. My core stack includes
+              Next.js, React.js, Node.js, NestJS, Express.js, TypeScript, MySQL,
+              MongoDB, TypeORM, and Knex.js — with hands-on experience in
+              frontend architecture, backend systems, and performance
+              engineering.
+            </p>
+            <p>
+              I specialize in performance optimization and technical SEO — SSR,
+              SSG, ISR, caching, Core Web Vitals, code splitting, lazy loading,
+              and bundle optimization — and have taken production Lighthouse
+              scores from ~40 to 97, consistently maintaining 90+ across
+              Performance, SEO, Accessibility, and Best Practices.
+            </p>
+            <p>
+              On the backend, I've built and maintained 10+ production
+              microservices — authentication, payments (Stripe, Razorpay),
+              orders, affiliate and voucher systems, listing services, UTM
+              tracking, and user/author dashboards — along with REST APIs,
+              Redis, BullMQ, and PM2-based background workers, database/API
+              optimization, and production troubleshooting. I also have working
+              exposure to Docker, Kubernetes (AKS), NGINX, Cloudflare, and Azure
+              DevOps CI/CD pipelines.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+            {[
+              { value: "3 yrs", label: "Experience" },
+              { value: "40 → 97", label: "Lighthouse Score" },
+              { value: "10+", label: "Microservices Shipped" },
+              { value: "4,000+", label: "Concurrent Users Served" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className={`rounded-xl p-5 text-center transition-all duration-300 hover:scale-105 ${
+                  darkMode
+                    ? "bg-gray-800 border border-gray-700"
+                    : "bg-gray-50 border border-gray-200"
+                }`}
+              >
+                <p className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  {stat.value}
+                </p>
+                <p
+                  className={`text-sm mt-1 ${
+                    darkMode ? "text-gray-400" : "text-gray-500"
+                  }`}
+                >
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section id="experience" className="max-w-6xl mx-auto px-6 py-20">
         <div className="flex items-center gap-3 mb-12">
@@ -147,9 +228,11 @@ function App() {
             <div className="space-y-3">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">Software Developer</h3>
+                  <h3 className="text-2xl font-semibold">
+                    Full Stack Engineer
+                  </h3>
                   <p className="text-blue-600 dark:text-blue-400 font-medium">
-                    TechneAI
+                    Techne AI Pvt. Ltd.
                   </p>
                 </div>
                 <span
@@ -170,26 +253,66 @@ function App() {
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
                   <span>
-                    Migrated legacy platforms to Next.js 15, improving SEO and
-                    scalability
+                    Led migration of legacy platforms to Next.js 15, taking
+                    Lighthouse scores from ~40 to 97+ with consistent 90+ across
+                    Performance, SEO, Accessibility, and Best Practices
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
                   <span>
-                    Automated ticketing workflows, reducing manual effort by 40%
+                    Improved frontend performance via SSR/SSG, code splitting,
+                    lazy loading, caching, bundle optimization, and Core Web
+                    Vitals/technical SEO
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
                   <span>
-                    Reduced build size by 60% and containerized app for faster
-                    deployments
+                    Reduced Docker image size by 60% (2 GB → 800 MB) and cut
+                    deployment time by 50% through multi-stage builds,
+                    dependency optimization, and CI/CD improvements
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
-                  <span>Designed Node.js alternative to legacy PHP CMS</span>
+                  <span>
+                    Migrated critical legacy PHP functionality into modular
+                    Node.js, Express.js, and NestJS backend services using
+                    TypeScript, MySQL, MongoDB, and TypeORM
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-blue-600 mt-1.5">•</span>
+                  <span>
+                    Designed Redis + BullMQ + PM2 background job processing,
+                    resolving production issues around worker management and
+                    resource utilization
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-blue-600 mt-1.5">•</span>
+                  <span>
+                    Automated 4–5 HRMS workflows through scheduled jobs,
+                    email/notification automation, and reporting, reducing
+                    manual effort by 40%
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-blue-600 mt-1.5">•</span>
+                  <span>
+                    Owned core HRMS and ticketing modules — user management,
+                    replacement workflows, reporting, PDF generation, and
+                    business process automation
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-blue-600 mt-1.5">•</span>
+                  <span>
+                    Implemented authentication, authorization, protected routes,
+                    input validation, and API security including encrypted
+                    parameters and secure URL handling
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
@@ -214,10 +337,10 @@ function App() {
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <h3 className="text-2xl font-semibold">
-                    Junior Fullstack Developer
+                    Full Stack Engineer
                   </h3>
                   <p className="text-blue-600 dark:text-blue-400 font-medium">
-                    Doographics
+                    DooGraphics
                   </p>
                 </div>
                 <span
@@ -238,25 +361,46 @@ function App() {
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
                   <span>
-                    Built modern, SEO-friendly web apps with Next.js using SSR,
-                    SSG, and ISR
+                    Built multilingual, SEO-friendly web platforms with Next.js
+                    using SSR, SSG, and ISR, improving Core Web Vitals across
+                    sites
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
                   <span>
-                    Integrated Express + MySQL microservices with reusable UI
-                    components
+                    Built and maintained 10+ production microservices —
+                    including authentication and payment services — using
+                    NestJS, Express, TypeORM, and MySQL
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
-                  <span>Built PWAs with Redis caching and Service Workers</span>
+                  <span>
+                    Spearheaded caching and search improvements with Redis and
+                    Elasticsearch, enabling fast reads for 4,000+ concurrent
+                    users
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-600 mt-1.5">•</span>
                   <span>
-                    Improved NGINX performance and integrated ElasticSearch
+                    Built PWAs with Redis caching and Service Workers for
+                    offline-first performance
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-blue-600 mt-1.5">•</span>
+                  <span>
+                    Managed Azure DevOps CI/CD pipelines and monitored
+                    Kubernetes resource usage for efficient deployments
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-blue-600 mt-1.5">•</span>
+                  <span>
+                    Improved NGINX performance and configuration for production
+                    reliability
                   </span>
                 </li>
               </ul>
@@ -375,105 +519,108 @@ function App() {
             <h2 className="text-4xl font-bold">Skills</h2>
           </div>
 
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
-                Core Technologies
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  "HTML",
-                  "CSS",
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              {
+                icon: Code2,
+                title: "Frontend & Frameworks",
+                skills: [
                   "JavaScript",
                   "TypeScript",
                   "React",
                   "Next.js",
+                  "Redux Toolkit",
+                  "HTML",
+                  "CSS",
+                ],
+              },
+              {
+                icon: Server,
+                title: "Backend & Architecture",
+                skills: [
                   "Node.js",
                   "Express.js",
                   "NestJS",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                      darkMode
-                        ? "bg-gray-700 text-gray-200"
-                        : "bg-gray-100 text-gray-800"
-                    }`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
-                Styling & UI
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {["Tailwind CSS", "Material-UI", "Bootstrap 5"].map((skill) => (
-                  <span
-                    key={skill}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                      darkMode
-                        ? "bg-gray-700 text-gray-200"
-                        : "bg-gray-100 text-gray-800"
-                    }`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
-                Databases & State
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {["MySQL", "MongoDB", "Redis", "Redux Toolkit"].map((skill) => (
-                  <span
-                    key={skill}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                      darkMode
-                        ? "bg-gray-700 text-gray-200"
-                        : "bg-gray-100 text-gray-800"
-                    }`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
-                DevOps & Tools
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {[
+                  "REST APIs",
+                  "Microservices",
+                  "BullMQ",
+                  "PM2",
+                ],
+              },
+              {
+                icon: Database,
+                title: "Databases & ORMs",
+                skills: [
+                  "MySQL",
+                  "MongoDB",
+                  "Redis",
+                  "TypeORM",
+                  "Knex.js",
+                  "Elasticsearch",
+                ],
+              },
+              {
+                icon: Palette,
+                title: "Styling & UI",
+                skills: ["Tailwind CSS", "Material-UI", "Bootstrap 5"],
+              },
+              {
+                icon: Cloud,
+                title: "DevOps & Cloud",
+                skills: [
+                  "Docker",
+                  "Kubernetes (AKS)",
+                  "Azure DevOps CI/CD",
+                  "NGINX",
+                  "Cloudflare",
                   "Linux",
                   "Bash",
-                  "Nginx",
-                  "Docker",
-                  "Kubernetes",
-                  "ElasticSearch",
+                ],
+              },
+              {
+                icon: Gauge,
+                title: "Performance & Integrations",
+                skills: [
+                  "SSR / SSG / ISR",
+                  "Core Web Vitals",
                   "PWAs",
                   "Service Workers",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                      darkMode
-                        ? "bg-gray-700 text-gray-200"
-                        : "bg-gray-100 text-gray-800"
-                    }`}
-                  >
-                    {skill}
-                  </span>
-                ))}
+                  "Stripe",
+                  "Razorpay",
+                ],
+              },
+            ].map(({ icon: Icon, title, skills }) => (
+              <div
+                key={title}
+                className={`rounded-xl p-6 transition-all duration-300 ${
+                  darkMode
+                    ? "bg-gray-800 border border-gray-700 hover:border-gray-600"
+                    : "bg-gray-50 border border-gray-200 hover:border-gray-300"
+                }`}
+              >
+                <div className="flex items-center gap-2.5 mb-4">
+                  <Icon
+                    className="text-blue-600 dark:text-blue-400"
+                    size={20}
+                  />
+                  <h3 className="text-lg font-semibold">{title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2.5">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className={`px-3.5 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                        darkMode
+                          ? "bg-gray-700 text-gray-200"
+                          : "bg-white text-gray-800 border border-gray-200"
+                      }`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
